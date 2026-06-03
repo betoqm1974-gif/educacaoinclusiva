@@ -1,3 +1,133 @@
-<!doctype html><html lang="pt"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>10 Testes de Treino - Educação Inclusiva</title><style>
-body{font-family:Arial,Helvetica,sans-serif;background:#f6f7fb;margin:0;color:#18202a}header{background:#183a5a;color:#fff;padding:24px 28px}main{max-width:1050px;margin:24px auto;background:#fff;border-radius:14px;padding:24px;box-shadow:0 3px 18px rgba(0,0,0,.10)}h1{margin:0;font-size:28px}h2{border-bottom:2px solid #e2e8f0;padding-bottom:8px}.card{border:1px solid #d6dee8;border-radius:12px;padding:16px;margin:14px 0;background:#fff}.qnum{font-weight:700;color:#183a5a}.options label{display:block;padding:9px 10px;margin:6px 0;border:1px solid #d7dde6;border-radius:8px;cursor:pointer}.options label:hover{background:#f1f5f9}input[type=text]{width:90%;max-width:520px;padding:10px;border:1px solid #b8c2cc;border-radius:7px;font-size:15px}.imgq{max-width:520px;width:100%;display:block;margin:10px 0;border:1px solid #cbd5e1;border-radius:10px}.correct{border-color:#16a34a!important;background:#ecfdf5!important}.wrong{border-color:#dc2626!important;background:#fef2f2!important}.answer{font-size:14px;margin-top:8px;padding:8px;border-radius:8px;background:#f8fafc}.toolbar{position:sticky;bottom:0;background:#ffffffee;border-top:1px solid #ddd;padding:14px;display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:12px 16px;background:#183a5a;color:white;font-weight:700;cursor:pointer}.btn.secondary{background:#64748b}.score{font-size:20px;font-weight:700;margin:12px 0}.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.menu a{display:block;background:#eaf2fb;border:1px solid #c7d7ea;border-radius:12px;padding:18px;text-decoration:none;color:#14314d;font-weight:700}.small{color:#475569;font-size:14px}@media print{.toolbar,.no-print{display:none}body{background:#fff}main{box-shadow:none;margin:0;max-width:none}.card{break-inside:avoid}}
-</style></head><body><header><h1>10 Testes de Treino - Educação Inclusiva</h1><p>Grau difícil, sem imagens exceto nas perguntas de anatomia do olho e ouvido.</p></header><main><h2>Escolhe um teste</h2><div class="menu"><a href="teste_01.html">Teste 01</a><a href="teste_02.html">Teste 02</a><a href="teste_03.html">Teste 03</a><a href="teste_04.html">Teste 04</a><a href="teste_05.html">Teste 05</a><a href="teste_06.html">Teste 06</a><a href="teste_07.html">Teste 07</a><a href="teste_08.html">Teste 08</a><a href="teste_09.html">Teste 09</a><a href="teste_10.html">Teste 10</a></div><p class="small">Cada teste inclui escolha múltipla com 4 hipóteses, verdadeiro/falso e preenchimento de espaços. No final podes corrigir, guardar respostas e imprimir/guardar em PDF.</p></main></body></html>
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Educação Inclusiva</title>
+<style>
+*{box-sizing:border-box}
+html,body{
+  font-family:'Cinzel','Trajan Pro',Georgia,'Times New Roman',serif;
+  margin:0;
+  color:#f8fafc;
+  background:#070707 url('fundo.jpeg') center top/cover fixed no-repeat;
+}
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.34);
+  z-index:-1;
+}
+.wrap{
+  max-width:1180px;
+  margin:0 auto;
+  padding:210px 28px 34px;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.landing{width:100%;}
+.card{
+  width:100%;
+  background:rgba(8,12,18,.64);
+  border:1px solid rgba(212,175,55,.34);
+  border-radius:22px;
+  box-shadow:0 16px 50px rgba(0,0,0,.42);
+  padding:34px 34px 40px;
+  backdrop-filter:blur(4px);
+}
+.logo{
+  position:absolute;
+  top:22px;
+  left:28px;
+  transform:none;
+  display:block;
+  width:min(310px,56vw);
+  height:auto;
+  filter:drop-shadow(0 12px 24px rgba(0,0,0,.55));
+  z-index:2;
+}
+h1{
+  margin:0 0 26px;
+  font-size:38px;
+  line-height:1.2;
+  text-align:center;
+  color:#f8fafc;
+  letter-spacing:1.1px;
+  font-family:'Cinzel','Trajan Pro',Georgia,'Times New Roman',serif;
+  font-weight:700;
+  text-shadow:0 2px 10px rgba(0,0,0,.75);
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:16px;
+  margin-top:16px;
+}
+.testbtn{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:74px;
+  text-align:center;
+  background:rgba(0,0,0,.62);
+  border:1px solid rgba(255,255,255,.36);
+  border-radius:16px;
+  padding:20px 14px;
+  text-decoration:none;
+  color:#ffffff;
+  box-shadow:0 8px 22px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.13);
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  font-family:'Cinzel','Trajan Pro',Georgia,'Times New Roman',serif;
+  letter-spacing:.5px;
+}
+.testbtn:hover{
+  transform:translateY(-2px);
+  background:rgba(0,0,0,.82);
+  box-shadow:0 12px 26px rgba(0,0,0,.48), 0 0 0 2px rgba(255,255,255,.14);
+}
+.testbtn strong{
+  font-size:20px;
+  font-weight:700;
+  color:#ffffff;
+  text-align:center;
+}
+@media (max-width:980px){
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .wrap{align-items:flex-start;padding-top:190px}
+}
+@media (max-width:560px){
+  body{background-position:center top;background-size:auto 100vh;}
+  .grid{grid-template-columns:1fr;gap:12px}
+  h1{font-size:29px}
+  .card{padding:24px 18px 28px}
+  .logo{top:18px;left:16px;width:min(230px,58vw)}
+  .wrap{padding:170px 16px 28px;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="landing">
+    <img class="logo" src="logotipo.png" alt="Os Pupilos do Lencastre">
+  <div class="card">
+    <h1>Educação Inclusiva</h1>
+    <div class="grid">
+      <a class="testbtn" href="teste_1.html"><strong>Teste 1</strong></a>
+      <a class="testbtn" href="teste_2.html"><strong>Teste 2</strong></a>
+      <a class="testbtn" href="teste_3.html"><strong>Teste 3</strong></a>
+      <a class="testbtn" href="teste_4.html"><strong>Teste 4</strong></a>
+      <a class="testbtn" href="teste_5.html"><strong>Teste 5</strong></a>
+      <a class="testbtn" href="teste_6.html"><strong>Teste 6</strong></a>
+      <a class="testbtn" href="teste_7.html"><strong>Teste 7</strong></a>
+      <a class="testbtn" href="teste_8.html"><strong>Teste 8</strong></a>
+      <a class="testbtn" href="teste_9.html"><strong>Teste 9</strong></a>
+      <a class="testbtn" href="teste_10.html"><strong>Teste 10</strong></a>
+    </div>
+  </div>
+  </div>
+</div>
+</body>
+</html>
