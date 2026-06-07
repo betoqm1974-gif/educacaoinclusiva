@@ -28,10 +28,21 @@ body::before{
   align-items:center;
   justify-content:center;
 }
-.landing{width:100%;}
+.landing{width:100%; transform:translateY(0);}
+.main-title{
+  margin:0 0 22px;
+  font-size:44px;
+  line-height:1.1;
+  text-align:center;
+  color:#f7ead0;
+  letter-spacing:2.4px;
+  font-family:'Cinzel','Trajan Pro',Georgia,'Times New Roman',serif;
+  font-weight:800;
+  text-transform:uppercase;
+  text-shadow:0 3px 12px rgba(0,0,0,.85), 0 0 18px rgba(212,175,55,.35);
+}
 .card{
   width:100%;
-  transform:translateY(84px);
   background:rgba(8,12,18,.64);
   border:1px solid rgba(212,175,55,.34);
   border-radius:22px;
@@ -39,7 +50,7 @@ body::before{
   padding:24px 24px 28px;
   backdrop-filter:blur(4px);
 }
-h1{
+.card h1{
   margin:0 0 18px;
   font-size:34px;
   line-height:1.2;
@@ -53,19 +64,19 @@ h1{
 .grid{
   display:grid;
   grid-template-columns:repeat(5,1fr);
-  gap:11px;
+  gap:16px;
   margin-top:16px;
 }
 .testbtn{
   display:flex;
   align-items:center;
   justify-content:center;
-  min-height:54px;
+  min-height:62px;
   text-align:center;
   background:rgba(0,0,0,.62);
   border:1px solid rgba(255,255,255,.36);
   border-radius:13px;
-  padding:13px 10px;
+  padding:16px 12px;
   text-decoration:none;
   color:#ffffff;
   box-shadow:0 8px 22px rgba(0,0,0,.36), inset 0 1px 0 rgba(255,255,255,.13);
@@ -81,7 +92,7 @@ h1{
 }
 .finalbtn{grid-column:2 / span 3;background:rgba(80,20,20,.62);border-color:rgba(255,255,255,.65)}
 .testbtn strong{
-  font-size:17px;
+  font-size:18px;
   font-weight:700;
   color:#ffffff;
   text-align:center;
@@ -90,24 +101,28 @@ h1{
   .grid{grid-template-columns:repeat(2,1fr)}
   .finalbtn{grid-column:1 / span 2}
   .wrap{align-items:center;padding-top:22px}
+  .landing{transform:translateY(0)}
+  .main-title{font-size:36px;margin-bottom:18px}
 }
+
 @media (max-width:560px){
   body{background-position:center 18%;background-size:auto 105vh;}
   .finalbtn{grid-column:1 / span 2}
-  .grid{grid-template-columns:repeat(2,1fr);gap:9px}
-  h1{font-size:26px}
-  .card{padding:16px 12px 18px;margin-top:0;transform:translateY(66px)}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .main-title{font-size:27px;letter-spacing:1.4px;margin-bottom:14px}
+  .card{padding:16px 12px 18px;margin-top:0}
   .wrap{padding:14px 10px 14px;align-items:center}
-  .testbtn{min-height:38px;padding:8px 7px;border-radius:9px}
-  .testbtn strong{font-size:13px}
+  .landing{transform:translateY(0)}
+  .testbtn{min-height:46px;padding:10px 9px;border-radius:10px}
+  .testbtn strong{font-size:14px}
 }
 </style>
 </head>
 <body>
 <div class="wrap">
   <div class="landing">
+    <h1 class="main-title">Educação Inclusiva</h1>
   <div class="card">
-    <h1>Educação Inclusiva</h1>
     <div class="grid">
       <a class="testbtn" href="teste_1.html"><strong>Teste 1</strong></a>
       <a class="testbtn" href="teste_2.html"><strong>Teste 2</strong></a>
