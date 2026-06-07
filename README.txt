@@ -1,1 +1,1 @@
-Versão v22: Teste Final refeito com 226 perguntas, repondo as perguntas removidas e mantendo as novas no final.
+Versão v22: Teste Final: 230 perguntas únicas; nota de 0 a 20 valores.
