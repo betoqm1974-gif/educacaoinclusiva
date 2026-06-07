@@ -1,1 +1,1 @@
-Abrir index.html. Inclui Teste Final com 220 perguntas. Cada pergunta vale 0.091 valores numa escala de 0 a 20.
+Versão v22: Teste Final refeito com 226 perguntas, repondo as perguntas removidas e mantendo as novas no final.
